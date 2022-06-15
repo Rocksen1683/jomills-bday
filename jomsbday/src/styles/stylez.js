@@ -24,18 +24,12 @@ const CenteredForm = styled.form`
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   margin: 0 auto;
-  width: 69%;
-  height: 69%;
+  width: 59%;
+  height: 59%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @Video (max-width: 600px) {
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    height: 50%;
-  }
 `;
 
 const Button = styled.button`
@@ -50,5 +44,31 @@ const Button = styled.button`
   border-radius: 3px;
 `;
 
-export { Title, Wrapper, CenteredForm, Button };
+//Create a stylized button styled component that changes color when clicked
+const StyledButton = styled(Button)`
+  color: ${(props) => (props.primary ? "grey" : "white")};
+  background-color: transparent;
+  font-size: 0.69em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 1px solid white;
+  border-radius: 2px;
+  &:hover {
+    background: ${(props) => (props.primary ? "white" : "white")};
+    color: ${(props) => (props.primary ? "grey" : "black")};
+  }
+`;
+
+const StyledInput = styled.input`
+  padding: 0.5em;
+  margin: 0.5em;
+  color: ${(props) => props.inputColor || "white"};
+  placeholder-color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 2px;
+`;
+
+
+export { Title, Wrapper, CenteredForm, Button, StyledButton, StyledInput };
 

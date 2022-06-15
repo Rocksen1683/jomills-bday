@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./styles/styles.css";
 
 const Video = ({ embedId }) => (
   <div className="video-responsive">
     <iframe
-      width="853"
+      width="696"
       height="480"
       src={`https://www.youtube.com/embed/${embedId}`}
       frameBorder="0"

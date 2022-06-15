@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import questions from "./questions.json";
 import Video from "./Videos.js";
-import { Button } from "./styles/stylez.js";
+import { StyledButton, StyledInput } from "./styles/stylez.js";
+import './styles/styles.css'
 
 function Form(props) {
   const [ans, setAns] = useState("");
@@ -21,20 +22,21 @@ function Form(props) {
   };
   return (
     <>
-      {ansId < 4 && <>
-        <label>{questions.Questions[ansId].question}</label>
-        <input
-          type="text"
-          placeholder="hit me up"
-          value={ans}
-          onChange={answerChangeHandler}
-        ></input>
-        <Button onClick={submitHandler}>
-          Let's see if you're right bitch
-        </Button>
-        <br></br>
-        <Video embedId={questions.Questions[ansId].link} />
-      </>}
+      {ansId < 4 && (
+        <>
+          <label>{questions.Questions[ansId].question}</label>
+          <StyledInput
+            type="text"
+            placeholder="hit me up"
+            value={ans}
+            onChange={answerChangeHandler}
+          ></StyledInput>
+            <StyledButton onClick={submitHandler}>
+              Let's see if you're right bitch
+            </StyledButton>
+          <Video embedId={questions.Questions[ansId].link} />
+        </>
+      )}
       {ansId >= 4 && <Video embedId="zR43V0ogJbI" />}
     </>
   );
