@@ -20,25 +20,59 @@ function Form(props) {
       setAnsId(ansId + 1);
     }
   };
-  return (
-    <>
-      {ansId < 4 && (
-        <>
-          <label>{questions.Questions[ansId].question}</label>
-          <StyledInput
-            type="text"
-            placeholder="hit me up"
-            value={ans}
-            onChange={answerChangeHandler}
-          ></StyledInput>
+
+  if (ansId === 0) {
+    return (
+      <>
+        <label>{questions.Questions[ansId].question}</label>
+        <StyledInput
+          type="text"
+          placeholder="hit me up"
+          value={ans}
+          onChange={answerChangeHandler}
+        ></StyledInput>
+        <StyledButton onClick={submitHandler}>
+          Let's see if you're right bitch
+        </StyledButton>
+      </>
+    );
+  }
+
+  else {
+    return (
+      <>
+        {ansId === 0 && (
+          <>
+            <label>{questions.Questions[ansId].question}</label>
+            <StyledInput
+              type="text"
+              placeholder="hit me up"
+              value={ans}
+              onChange={answerChangeHandler}
+            ></StyledInput>
             <StyledButton onClick={submitHandler}>
               Let's see if you're right bitch
             </StyledButton>
-          <Video embedId={questions.Questions[ansId].link} />
-        </>
-      )}
-      {ansId >= 4 && <Video embedId="zR43V0ogJbI" />}
-    </>
-  );
+          </>
+        )}
+        {ansId < 4 && (
+          <>
+            <label>{questions.Questions[ansId].question}</label>
+            <StyledInput
+              type="text"
+              placeholder="hit me up"
+              value={ans}
+              onChange={answerChangeHandler}
+            ></StyledInput>
+            <StyledButton onClick={submitHandler}>
+              Let's see if you're right bitch
+            </StyledButton>
+            <Video embedId={questions.Questions[ansId].link} />
+          </>
+        )}
+        {ansId >= 4 && <Video embedId="zR43V0ogJbI" />}
+      </>
+    );
+  }
 }
 export default Form;
