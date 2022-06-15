@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import questions from "./questions.json";
 import Video from "./Videos.js";
+import { Button } from "./styles/stylez.js";
 
 function Form(props) {
   const [ans, setAns] = useState("");
@@ -12,7 +13,9 @@ function Form(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    console.log('asdasd')
     if (questions.Questions[ansId].answer === ans) {
+      console.log('popaosda')
       setAnsId(ansId + 1);
     }
   };
@@ -26,9 +29,10 @@ function Form(props) {
           value={ans}
           onChange={answerChangeHandler}
         ></input>
-        <button onClick={submitHandler}>
+        <Button onClick={submitHandler}>
           Let's see if you're right bitch
-        </button>
+        </Button>
+        <br></br>
         <Video embedId={questions.Questions[ansId].link} />
       </>}
       {ansId >= 4 && <Video embedId="zR43V0ogJbI" />}

@@ -24,17 +24,31 @@ const CenteredForm = styled.form`
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   margin: 0 auto;
-  width: 50%;
-  height: 50%;
+  width: 69%;
+  height: 69%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media (max-width: 600px) {
-    width: 100%;
-    height: 100%;
+  @Video (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 50%;
   }
 `;
 
-export { Title, Wrapper, CenteredForm };
+const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${(props) => (props.primary ? "palevioletred" : "white")};
+  color: ${(props) => (props.primary ? "white" : "palevioletred")};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+
+export { Title, Wrapper, CenteredForm, Button };
 
