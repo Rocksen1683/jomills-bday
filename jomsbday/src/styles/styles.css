@@ -23,3 +23,13 @@
     background-position: right bottom, left top;
     background-repeat: no-repeat, no-repeat;
 }
+
+.fuckyou{
+    max-width: 874px;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
