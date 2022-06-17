@@ -60,14 +60,18 @@ const StyledButton = styled(Button)`
 `;
 
 const StyledInput = styled.input`
-  padding: 0.5em;
-  margin: 0.5em;
+  padding: 0.25em;
+  margin: 0.25em;
   color: ${(props) => props.inputColor || "white"};
+  height:25px;
+  width:200px;
   placeholder-color: white;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 2px;
 `;
+
+
 
 
 export { Title, Wrapper, CenteredForm, Button, StyledButton, StyledInput };

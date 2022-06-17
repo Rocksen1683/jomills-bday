@@ -24,7 +24,7 @@ function Form(props) {
   if (ansId === 0) {
     return (
       <>
-        <label>{questions.Questions[ansId].question}</label>
+        <label style={{fontSize:"35px"}}>{questions.Questions[ansId].question}</label>
         <StyledInput
           type="text"
           placeholder="hit me up"
