@@ -152,7 +152,7 @@ function Form(props) {
             </StyledButton>
           </>
         )}
-        {ansId < 4 && (
+        {ansId < 11 && (
           <>
             <label>{questions.Questions[ansId].question}</label>
             <label style={{ fontSize: "20px" }}>Incorrect Answers: {wrong}</label>
@@ -165,10 +165,13 @@ function Form(props) {
             <StyledButton onClick={submitHandler}>
               Let's see if you're right bitch
             </StyledButton>
-            <Video embedId={questions.Questions[ansId].link} />
+            <Video embedId={questions.Questions[ansId - 1].link} />
           </>
         )}
-        {ansId >= 4 && <Video embedId="zR43V0ogJbI" />}
+        {ansId >= 11 && (<>
+          <p style={{ fontSize: "24px" }}> Congratulations on reaching the end. Here's your reward, we hope you enjoy it!</p>
+          <Video embedId="zR43V0ogJbI" />
+        </>)}
       </>
     );
   }
