@@ -97,7 +97,7 @@ const Gallery = () => {
 function Form(props) {
   const [ans, setAns] = useState("");
   const [ansId, setAnsId] = useState(0);
-
+  const [wrong, setwrong] = useState(0);
   const answerChangeHandler = (e) => {
     setAns(e.target.value);
   };
@@ -109,6 +109,10 @@ function Form(props) {
       console.log('popaosda')
       setAnsId(ansId + 1);
     }
+
+    else {
+      setwrong(wrong + 1)
+    }
   };
 
   if (ansId === 0) {
@@ -116,6 +120,7 @@ function Form(props) {
       <>
         <Gallery />
         <label style={{ fontSize: "35px" }}>{questions.Questions[ansId].question}</label>
+        <label style={{ fontSize: "20px" }}>Incorrect Answers: {wrong}</label>
         <StyledInput
           type="text"
           placeholder="hit me up"
