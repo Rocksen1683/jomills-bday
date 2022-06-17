@@ -140,6 +140,7 @@ function Form(props) {
         {ansId === 0 && (
           <>
             <label>{questions.Questions[ansId].question}</label>
+            <label style={{ fontSize: "20px" }}>Incorrect Answers: {wrong}</label>
             <StyledInput
               type="text"
               placeholder="hit me up"
@@ -154,6 +155,7 @@ function Form(props) {
         {ansId < 4 && (
           <>
             <label>{questions.Questions[ansId].question}</label>
+            <label style={{ fontSize: "20px" }}>Incorrect Answers: {wrong}</label>
             <StyledInput
               type="text"
               placeholder="hit me up"
