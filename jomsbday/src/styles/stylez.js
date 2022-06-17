@@ -18,10 +18,10 @@ const Wrapper = styled.section`
 const Background = styled.div`
   background-image: url(${require("../fotos/IMG-20220616-WA0014.jpg")});
   background-size: cover;
-  hei
   background-repeat: no-repeat;
   background-position: center;
   flex-direction: column;
+  height: 120vh;
 `;
 
 const CenteredForm = styled.form`

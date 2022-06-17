@@ -7,7 +7,7 @@ import Carousel from "better-react-carousel";
 
 const Gallery = () => {
   return (
-    <Carousel cols={1} rows={1} gap={10} loop autoplay={2000}>
+    <Carousel cols={1} rows={1} gap={10} loop autoplay={2000} hideArrow={true}>
       <Carousel.Item>
         <img
           classname="photo"
