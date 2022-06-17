@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from './form.js';
-import { CenteredForm } from './styles/stylez.js';
+import { Background, CenteredForm } from './styles/stylez.js';
 import './styles/styles.css'
 import Carousel from "better-react-carousel";
 
@@ -33,6 +33,7 @@ const Gallery = () => {
 
 function App() {
   return (
+    <Background>
       <div className="App">
         <CenteredForm>
           <header className="App-header">
@@ -42,6 +43,7 @@ function App() {
           <Form></Form>
         </CenteredForm>
       </div>
+    </Background>
   );
 }
 

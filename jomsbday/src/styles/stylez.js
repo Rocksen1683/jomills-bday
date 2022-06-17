@@ -14,6 +14,16 @@ const Wrapper = styled.section`
 `;
 
 
+//create a background image for the entire App that will be the same for all pages
+const Background = styled.div`
+  background-image: url(${require("../fotos/IMG-20220616-WA0014.jpg")});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-direction: column;
+  height: 100vh;
+`;
+
 const CenteredForm = styled.form`
   text-align: center;
   background: #282c34;
@@ -74,5 +84,5 @@ const StyledInput = styled.input`
 
 
 
-export { Title, Wrapper, CenteredForm, Button, StyledButton, StyledInput };
+export { Title, Wrapper, CenteredForm, Button, StyledButton, StyledInput, Background };
 
