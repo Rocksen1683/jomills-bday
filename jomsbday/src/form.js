@@ -170,6 +170,7 @@ function Form(props) {
         )}
         {ansId >= 11 && (<>
           <p style={{ fontSize: "24px" }}> Congratulations on reaching the end...of this quiz, the start of your 19th year lies ahead though! Here's your reward, we hope you enjoy it!</p>
+          <p style={{fontSize: "20px"}}>Epico website made by 1337 devs: DeepinYou, EkaNyashh, RoHitYaAss, TanMayISpank</p>
           <Video embedId="zR43V0ogJbI" />
         </>)}
       </>
